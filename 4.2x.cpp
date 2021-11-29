@@ -4,51 +4,44 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Podaj rozmiar tablicy: ";
-    cin >> n;
+	int n;
 
-    int a[n];
+	cout << "Podaj rozmiar tablicy: ";
+	cin >> n;
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Podaj element " << i << " tablicy: ";
-        cin >> a[i];
-    }
+	int* a = new int[n];
 
-    int licznik, k = 0, m = 0, b[n], c[n], maxL, maxW, ;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Podaj element " << i << " tablicy: ";
+		cin >> a[i];
+	}
 
-    do
-    {
-        licznik = 0;
-        for (int i = 0; i < n; i++)
-        {
-            if (a[i] == a[k])
-                licznik++;
-        }
+	int* b = new int[n];
 
-        b[m] = licznik;
-        c[m] = a[k];
+	for (int i = 0; i < n; i++)
+	{
+		int licznik = 0;
+		for (int k = 0; k < n; k++)
+		{
+			if (a[i] == a[k])
+				licznik++;
+		}
 
-        m++;
-        k++;
+		b[i] = licznik;
+	}
 
-    } while (k < n);
+	int max = 0;
+	int index = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (b[i] > max)
+		{
+			index = i;
+		}
+	}
 
-    maxL = b[0];
-    for (int i = 0; i < m; i++)
-    {
-        if (b[i] > maxL)
-        {
-            maxL = b[i];
-            maxW = c[i];
+	cout << endl << "Najczesciej wystepujacy element: " << a[index];
 
-        }
-
-
-    }
-
-    cout << endl << "Najczesciej wystepujacy element: " << maxW;
-
-    return 0;
+	return 0;
 }
