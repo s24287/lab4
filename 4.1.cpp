@@ -3,13 +3,18 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int tab[n];
-		int n;
-	cout << "Podaj ilość liczb n = ";
-	cin >> n;
-	max = tab[0]; 
+	int n;
 
-	for (int i = 1; i < 10; i++) 
+	cout << "Podaj ilosc liczb n = ";
+	cin >> n;
+
+	int* tab = new int[n];
+	for (int i = 0; i < n; i++) {
+		cout << "Podaj liczbe: ";
+		cin >> tab[i];
+	}
+	int max = 0;
+	for (int i = 0; i < n; i++)
 		if (max < tab[i])
 			max = tab[i];
 
