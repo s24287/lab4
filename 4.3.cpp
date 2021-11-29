@@ -12,33 +12,31 @@ int main()
 
 
 
-    for (int i = 0; i < 10; i++)
+     for (int i = 0; i < 10; i++)
 
     {
+      
+         cout << "\t" << (tab[0][i] = i);
 
-        tab[0][i] = i;
+        s0 = 0;
 
-        s0 = s0 + i;
-
-    }
+    } cout << endl;
 
     for (int i = 0; i < 10; i++)
-
+        
     {
+        
+        cout << "\t" << (tab [1][i] = i + i);
 
-        tab[1][i] = i + i;
+        s1 = 0;
 
-        s1 = s1 + (i + i);
-
-    }
+    } cout << endl;
 
 
     cout << endl;
-
+   
     cout << "Suma kolumna druga: " << s1 << endl;
 
     return 0;
 
 }
-
-
