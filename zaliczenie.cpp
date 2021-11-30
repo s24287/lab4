@@ -59,7 +59,7 @@ void ruch(char t[], char& gracz)
     gracz = (gracz == 'O') ? 'X' : 'O';
 }
 
-main()
+int main()
 {
     char p[10], g, w;
 
